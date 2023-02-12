@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/src/generatePass.js"></script>
+</head>
+<body>
+    <label>Name <input id="name"> <br><br>
+    <span>
+        <label>Password <input id="password" onclick="myFunction()">
+        <h6 style="display: none" id="autoSuggestionTag">Auto Suggestion:
+            <label style="display: none" id="autoSuggestedPass"></label>
+        </h6>
+    </span>
+    <button>Sign up</button>
+
+        <script>
+            function myFunction() {
+                $.ajax({url: "http://localhost:8080/generatePassword", success: function(result){
+                        $('#autoSuggestionTag').css('display', 'block');
+                        $('#autoSuggestedPass').css('display', 'block');
+                        $('#autoSuggestedPass').text(result);
+                    }});
+                ff();
+            }
+        </script>
+</body>
+</html>

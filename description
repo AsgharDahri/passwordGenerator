@@ -1,0 +1,9 @@
+# passwordGenerator
+Simple Password generator app to understand spring config.
+The application provided one service to combine different characters, numbers in different ways to generate password.
+
+# Personal Learnings:
+- The best learning from this project was to understand the environment of spring boot along with views such as jsp.
+- learnt the difference between Controller and RestController.
+- How to config views in spring boot.
+
